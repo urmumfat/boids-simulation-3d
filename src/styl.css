@@ -1,0 +1,153 @@
+/* index.html */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* main.jsx */
+.app-layout {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #111827;
+}
+
+.simulation-panel {
+  flex: 1;
+  position: relative;
+  height: 100%;
+}
+
+.sidebar-panel {
+  flex: 0 0 25%;
+  min-width: 300px;
+  max-width: 500px;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 20;
+  background: #1f2937;
+  border-left: 1px solid #374151;
+}
+
+/* explanation.jsx */
+.expl-container {
+  width: 100%;
+  min-height: 100%;
+  padding: 25px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e5e7eb;
+}
+
+.expl-header {
+  font-size: 22px;
+  color: #38bdf8;
+  border-bottom: 1px solid #374151;
+  padding-bottom: 15px;
+  margin: 0 0 20px 0;
+  font-weight: 700;
+}
+
+.expl-section {
+  margin-bottom: 30px;
+}
+
+.expl-subheader {
+  color: #9ca3af;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.expl-title {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #f3f4f6;
+  margin-bottom: 8px;
+}
+
+.math-block {
+  background: #111827;
+  padding: 12px;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  color: #a5f3fc;
+  margin-bottom: 12px;
+  border-left: 3px solid #38bdf8;
+  overflow-x: auto;
+}
+
+.var-highlight {
+  color: #fcd34d;
+}
+
+/* symulation.jsx */
+.sim-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.controls-overlay {
+  padding: 10px;
+  background: rgba(17, 24, 39, 0.8);
+  backdrop-filter: blur(4px);
+  color: white;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 3px solid #374151;
+  box-sizing: border-box;
+}
+
+.control-item {
+  display: flex;
+  flex-direction: column;
+  min-width: 70px;
+}
+
+.control-label {
+  font-size: 0.65rem;
+  font-weight: bold;
+  margin-bottom: 2px;
+  color: #9ca3af;
+}
+
+.control-input {
+  cursor: pointer;
+  height: 4px;
+}
+
+.sim-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
